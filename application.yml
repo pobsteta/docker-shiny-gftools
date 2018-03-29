@@ -1,7 +1,7 @@
 shiny:
   proxy:
     title: Office National des Forêts
-    logo-url: file:///home/pascal/digital_ocean/docker-shinyproxy/logo_onf.jpg
+    logo-url: file:///opt/shinyproxy/logo_onf.jpg
     landing-page: /
     heartbeat-rate: 10000
     heartbeat-timeout: 60000
