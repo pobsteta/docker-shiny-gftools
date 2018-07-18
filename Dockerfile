@@ -16,7 +16,7 @@ RUN set -x \
 	&& gosu nobody true
 
 RUN mkdir -p /opt/shinyproxy/
-RUN wget https://www.shinyproxy.io/downloads/shinyproxy-1.1.0.jar -O /opt/shinyproxy/shinyproxy.jar
+RUN wget https://www.shinyproxy.io/downloads/shinyproxy-1.1.1.jar -O /opt/shinyproxy/shinyproxy.jar
 COPY application.yml /opt/shinyproxy/application.yml
 COPY logo_onf.jpg /opt/shinyproxy/logo_onf.jpg
 

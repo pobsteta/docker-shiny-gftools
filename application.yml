@@ -5,14 +5,14 @@ shiny:
     landing-page: /
     heartbeat-rate: 10000
     heartbeat-timeout: 60000
-    container-wait-time: 20000
+    container-wait-time: 100000
     port: 8080
     authentication: simple
     admin-groups: admingroup
     # Example: 'simple' authentication configuration
     users:
     - name: po76844
-      password: Password06
+      password: Password07
       groups: admingroup
     - name: user
       password: user
@@ -42,8 +42,8 @@ shiny:
     description: Aide à la caractérisation des tarifs et des mercuriales utilisés dans l'application PRODBOIS
     docker-cmd: ["R", "-e", "shiny::runApp('/root/spgftools')"]
     docker-image: pobsteta/shiny-gftools
-    groups: admingroup,users
-    docker-network: host
+    groups: [admingroup,users]
+    docker-network: "host"
     
 logging:
   file:
