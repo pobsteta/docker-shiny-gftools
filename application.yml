@@ -6,7 +6,7 @@ shiny:
     heartbeat-rate: 10000
     heartbeat-timeout: 60000
     container-wait-time: 100000
-    port: 8080
+    port: 8090
     authentication: simple
     admin-groups: admingroup
     # Example: 'simple' authentication configuration
