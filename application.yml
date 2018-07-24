@@ -27,10 +27,10 @@ shiny:
       #  manager-password: password
       - url: ldap://ldap.onf.fr:389/o=onf.fr
         user-dn-pattern: 
-        group-search-base: o=onf.fr
+        group-search-base: 
         group-search-filter: 
         manager-dn: 
-        manager-password: 
+        manager-password: password
     # Docker configuration
     docker:
       cert-path: /home/none
