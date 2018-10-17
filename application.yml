@@ -8,6 +8,7 @@ proxy:
   port: 8090
   authentication: simple
   admin-groups: admingroup
+  # 'simple'
   users:
   - name: po76844
     password: Password08
@@ -15,10 +16,11 @@ proxy:
   - name: emerge
     password: emerge
     groups: users
-   ldap:
+  # 'ldap'
+  ldap:
     url: ldap://ldap.onf.fr/ou=people,o=onf.fr?uid?sub?(ObjectClass=*)
     user-dn-pattern: uid={0}
-    group-search-base:ou=access,o=onf.fr
+    group-search-base: ou=access,o=onf.fr
     group-search-filter: (objectClass=84-e-emerge)
     manager-dn:
     manager-password: 
