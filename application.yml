@@ -6,15 +6,22 @@ proxy:
   heartbeat-timeout: 60000
   container-wait-time: 100000
   port: 8090
-  authentication: simple
+  authentication: ldap
   admin-groups: admingroup
   users:
   - name: po76844
     password: Password08
     groups: admingroup
-  - name: user
-    password: user
-    groups: users    
+  - name: emerge
+    password: emerge
+    groups: users
+   ldap:
+    url: ldap://ldap.onf.fr/ou=people,o=onf.fr?uid?sub?(ObjectClass=*)
+    user-dn-pattern: uid={0}
+    group-search-base:ou=access,o=onf.fr
+    group-search-filter: (objectClass=84-e-emerge)
+    manager-dn:
+    manager-password: 
   # Docker configuration
   docker:
     internal-networking: true
