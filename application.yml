@@ -6,7 +6,7 @@ proxy:
   heartbeat-timeout: 60000
   container-wait-time: 100000
   port: 8090
-  authentication: simple
+  authentication: ldap
   admin-groups: admingroup
   # 'simple'
   users:
